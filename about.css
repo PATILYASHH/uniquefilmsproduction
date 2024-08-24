@@ -1,0 +1,159 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    background: url('your-background-image.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hero-section .container {
+    text-align: center;
+  }
+  
+  /* Big Logo (Text Animation) */
+  .animate-text {
+    font-size: 3rem;
+    font-weight: bold;
+    background: linear-gradient(45deg, #f06, #f79, #4a90e2, #50c5b0);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientAnimation 5s ease infinite;
+  }
+  
+  /* Text Animation */
+  @keyframes gradientAnimation {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+  }
+  
+  /* Button Animation */
+  .animate-button {
+    animation: fadeInUp 2s ease-out;
+  }
+  
+  /* Navbar Styling */
+  .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav-link {
+    color: white;
+    transition: color 0.3s;
+  }
+  
+  .nav-link:hover {
+    color: #d9534f;
+  }
+  
+  /* Projects Section */
+  #projects {
+    background-color: #343a40;
+  }
+  
+  .card {
+    border: none;
+    transition: transform 0.3s;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .btn-primary {
+    background-color: #d9534f;
+    border: none;
+  }
+  
+  .btn-primary:hover {
+    background-color: #c9302c;
+  }
+  
+  /* Animations */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .logo-img {
+    height: 40px;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .big-logo {
+      display: none; /* Hide the big logo on mobile devices */
+    }
+  
+    .hero-section {
+      height: auto;
+      padding: 50px 0;
+    }
+  
+    .navbar-brand {
+      font-size: 1.25rem;
+    }
+  
+    .navbar-nav {
+      text-align: center;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .card {
+      margin-bottom: 20px;
+    }
+  }
+  
+  /* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* About Page Styling */
+  #introduction {
+    padding: 3rem 0;
+  }
+  
+  #team .card {
+    border: none;
+    transition: transform 0.3s;
+  }
+  
+  #team .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card-img-top {
+    height: 200px;
+    object-fit: cover;
+  }
+  

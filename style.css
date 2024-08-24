@@ -1,137 +1,134 @@
-    /* Preloader */
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
+/* General Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    /* Hero section background with a cinematic feel */
-    .hero {
-      background: url('https://source.unsplash.com/1600x900/?film,cinema') center/cover no-repeat;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-      text-align: center;
-    }
+/* Hero Section */
+.hero-section {
+  background: url('your-background-image.jpg') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-    /* Cinematic dark text with gold accent */
-    .hero h1 {
-      font-size: 4rem;
-      font-weight: bold;
-      color: #f7c552;
-      text-transform: uppercase;
-      transition: transform 0.3s ease-in-out;
-    }
+.hero-section .container {
+  text-align: center;
+}
 
-    /* Hover effect for hero title */
-    .hero h1:hover {
-      color: #ffffff;
-      transform: scale(1.05);
-    }
+/* Big Logo (Text Animation) */
+.animate-text {
+  font-size: 3rem;
+  font-weight: bold;
+  background: linear-gradient(45deg, #f06, #f79, #4a90e2, #50c5b0);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientAnimation 5s ease infinite;
+}
 
-    .hero p {
-      font-size: 1.5rem;
-      color: #7e7e7c;;
-      margin-top: 20px;
-    }
+/* Text Animation */
+@keyframes gradientAnimation {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
+}
 
-    /* Section Headers with elegant dark and gold color */
-    h2 {
-      color: #f7c552;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      margin-bottom: 30px;
-    }
+/* Button Animation */
+.animate-button {
+  animation: fadeInUp 2s ease-out;
+}
 
-    /* Navbar styling with dark mode */
-    .navbar-brand {
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: #f7c552;
-    }
+/* Navbar Styling */
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
 
-    .navbar-dark .nav-link {
-      color: #f1f1f1 !important;
-      transition: color 0.3s ease-in-out;
-    }
+.nav-link {
+  color: white;
+  transition: color 0.3s;
+}
 
-    .navbar-dark .nav-link:hover {
-      color: #f7c552 !important;
-    }
+.nav-link:hover {
+  color: #d9534f;
+}
 
-    /* Section background colors and padding */
-    #about, #application-form {
-      background-color: #2c3e50;
-      padding: 50px 0;
-      color: white;
-    }
+/* Projects Section */
+#projects {
+  background-color: #343a40;
+}
 
-    #socials {
-      background-color: #1c1c1e;
-      padding: 50px 0;
-      color: #f7c552;
-    }
+.card {
+  border: none;
+  transition: transform 0.3s;
+}
 
-    #feedback {
-      background-color: #333;
-      padding: 50px 0;
-      color: white;
-    }
+.card:hover {
+  transform: scale(1.05);
+}
 
-    .footer {
-      background-color: #1c1c1e;
-      color: #f7c552;
-      padding: 20px 0;
-      text-align: center;
-    }
+.btn-primary {
+  background-color: #d9534f;
+  border: none;
+}
 
-    /* Button animation with elegant hover */
-    .btn-light {
-      background-color: transparent;
-      border: 2px solid #f7c552;
-      color: #f7c552;
-      transition: all 0.3s ease-in-out;
-    }
+.btn-primary:hover {
+  background-color: #c9302c;
+}
 
-    .btn-light:hover {
-      background-color: #f7c552;
-      color: #1c1c1e;
-    }
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-    /* Card styling for testimonials */
-    .testimonial-card {
-      border: 1px solid #f7c552;
-      background-color: #2c3e50;
-      color: white;
-      transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
-    }
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-    .testimonial-card:hover {
-      transform: translateY(-10px);
-      background-color: #1c1c1e;
-    }
+.logo-img {
+  height: 40px;
+}
 
-    /* Image hover effect for about section */
-    .about-img {
-      transition: transform 0.5s ease-in-out;
-      width: 100%; /* Ensure full width responsiveness */
-    }
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .big-logo {
+    display: none; /* Hide the big logo on mobile devices */
+  }
 
-    .about-img:hover {
-      transform: scale(1.05);
-    }
+  .hero-section {
+    height: auto;
+    padding: 50px 0;
+  }
 
-    /* Form styling fixes */
-    form input,
-    form textarea {
-      background-color: #333;
-      border: 1px solid #444;
-      color: white;
-    }
+  .navbar-brand {
+    font-size: 1.25rem;
+  }
 
-    form input::placeholder,
-    form textarea::placeholder {
-      color: #ccc;
-    }
+  .navbar-nav {
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .card {
+    margin-bottom: 20px;
+  }
+}
