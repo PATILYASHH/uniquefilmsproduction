@@ -5,3 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 2000); // Adjust timing if needed
   });
   
+  window.addEventListener('load', function() {
+    document.body.classList.add('loaded');
+});
